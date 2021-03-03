@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/fontawesome-free-5.15.2-web/fontawesome-free-5.15.2-web/css/all.css">
+    <title>Document</title>
+    <style>
+        button , input[type=text]{
+            outline:none !important;
+        }
+        header {
+            background-color: rgb(190, 190, 194);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #desc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+        }
+
+        #desc h2 {
+            font-size: xxx-large;
+            margin-block-start: 0.4em;
+            margin-block-end: 0.6em;
+        }
+
+        input[type="text"] {
+            /* font-size:20px; */
+            padding: 4px 12px;
+        }
+
+
+
+        #desc .search {
+            display: flex;
+            margin: 20px;
+        }
+
+        #section {
+            border: solid 2px rgb(175, 174, 179);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3px;
+            padding-bottom: 35px;
+        }
+
+        #htext {
+            /* width: 50%;
+            position: relative; */
+            display: flex;
+            /* margin-top: 35px; */
+            align-items: center;
+            width: 50%;
+
+        }
+
+        #htext h3 {
+            flex-grow: 10;
+        }
+
+        #htext button {
+            border-radius: 10px;
+            width: 85px;
+            height: 30px;
+        }
+
+        #chkbtn {
+            display: none;
+        }
+
+        #section .empty {
+            border: solid;
+            display: flex;
+            align-items: center;
+            opacity: 0.1;
+            font-size: xx-large;
+            justify-content: center;
+            padding: 50px 0px;
+        }
+
+        .boook {
+            border-left: solid rgb(179, 172, 204) 5px;
+            margin-top: 35px;
+            width: 50%;
+            display: flex;
+            font-family: cursive;
+            letter-spacing: 1px;
+            align-items: center;
+        }
+
+        .boook .btn {
+            border-radius: 10px;
+            width: 100px;
+            height: 30px;
+            outline: none;
+        }
+
+        .boook .span .identity{
+            display:none;
+        }
+        /* .search input,
+        .search button {
+            padding: 4px 12px; */
+            /* width: 20em; */
+            /* height: 1.5em; */
+            /*font-size: 0.8em; */
+            /* border: none;
+            outline: none;
+        } */
+
+        .span {
+            width: 90%;
+            padding: 20px;
+        }
+
+        #create_book {
+            display: flex;
+            margin: 25px 30px;
+        }
+
+        #create_book input[type=text]:focus{
+            background-color: aqua;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: rgb(137, 170, 247);
+        }
+
+        @media only screen and (min-width: 700px) {
+            #desc span:nth-child(3) {
+                display: none;
+            }
+
+            .empty {
+                width: 49%;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            #desc span:nth-child(2) {
+                display: none;
+            }
+
+            .boook {
+                width: 90%;
+            }
+
+            .empty {
+                width: 90%;
+            }
+
+            #htext {
+                /* display: flex; */
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="desc">
+            <h2>To Do List</h2>
+            <span style="margin-bottom: 20px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+                deleniti laboriosam eius
+                obcaecati praesentium quaerat alias numquam sunt ipsa aut soluta ab itaque, explicabo tempore cumque!
+                Recusandae delectus odio corrupti pariatur ut iste velit, nihil accusamus commodi ad minus animi?
+                <b>FOR BIG SCREEN</b>
+            </span>
+            <span style="margin-bottom: 20px;">Lorem ipsum dolor sit, amet consectetur iste velit, nihil accusamus
+                commodi ad minus animi?
+                <b>FOR SMALL SCREEN</b>
+            </span>
+            <!-- <div class="search">
+                <input type="text" placeholder="search book">
+                <button class="btn"><i class="fas fa-search"></i></button>
+            </div> -->
+        </div>
+
+    </header>
+    <div id="section">
+        <div id="create_book">
+
+            <input type="text" id="book_name" placeholder="Type a task">
+            <button class="btn">Create Task</button>
+
+        </div>
+        <div id="htext">
+            <h3>Activities Pending</h3>
+            <button class="btn" id="all">Select All</button>
+            <button id="chkbtn" class="btn">Delete</button>
+        </div>
+        <div class="empty">
+            <span>Add some action in life</span>
+        </div>
+        <!--<div class="boook">
+            <input type="checkbox" class="chk">
+            <span class="span">book1.<span class="identity">t1</span></span>
+
+            <button class="btn delete">Delete</button>
+        </div>
+        <div class="boook">
+            <input type="checkbox" class="chk">
+
+            <span class="span">Lorem ipsum dolor, sit amet consectet<span class="identity">t2</span></span>
+
+            <button class="btn delete">Delete</button>
+        </div>
+        <div class="boook">
+            <input type="checkbox" class="chk">
+
+            <span class="span">Lorem ipsum dolor, sit amet consectet</span>
+
+            <button class="btn delete">Delete</button>
+        </div>
+        <div class="boook">
+            <input type="checkbox" class="chk">
+
+            <span class="span">Lorem ipsum dolor, sit amet consectet</span>
+
+            <button class="btn delete">Delete</button>
+        </div> -->
+    </div>
+    <script src="/todo.js"></script>
+    <!-- <script src="/data.js"></script> -->
+    <!-- <script src="/chk.js"></script> -->
+    <!-- <script src="/validation.js"></script> -->
+</body>
+
+</html>
